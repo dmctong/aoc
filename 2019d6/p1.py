@@ -1,7 +1,6 @@
-from collections import deque
-from collections import defaultdict
+from collections import deque, defaultdict
 
-filename = 'e.txt'
+filename = 'i.txt'
 
 graph = defaultdict(list)
 with open(filename, 'r') as file:

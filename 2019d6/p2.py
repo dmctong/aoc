@@ -1,5 +1,4 @@
-from collections import deque
-from collections import defaultdict
+from collections import deque, defaultdict
 
 filename = 'e.txt'
 filename = 'e2.txt'
@@ -21,8 +20,6 @@ def dfs(graph, start, end):
         path = queue.pop()
         s = path[-1]
 
-        print(path)
-
         if s == end:
             final_path = path
             break
@@ -34,8 +31,6 @@ def dfs(graph, start, end):
                 queue.append(copy_path)
     
     return(final_path)
-
-print(dfs(graph, 'YOU', 'SAN'))
 
 final_path = dfs(graph, 'YOU', 'SAN')
 print(f'Part 2: a minimum of {len(final_path)-3} orbital transfers are required between YOU and SAN')
